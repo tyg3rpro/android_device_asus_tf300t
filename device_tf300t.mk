@@ -16,6 +16,18 @@ $(call inherit-product-if-exists, vendor/asus/tf300t/tf300t-vendor.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/asus/tf300t/overlay
 
+ifneq ($(TARGET_KERNEL_BUILT_FROM_SOURCE), true)
+# Use prebuilt kernel
+ifeq ($(TARGET_PREBUILT_KERNEL),)
+LOCAL_KERNEL := device/asus/tf300t/kernel
+else
+LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+endif
+endif
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_KERNEL):kernel
+
 # Files needed for boot image
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ramdisk/init.cardhu.rc:root/init.cardhu.rc \
