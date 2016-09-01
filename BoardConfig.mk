@@ -102,8 +102,8 @@ TARGET_PREBUILT_KERNEL := device/asus/tf300t/kernel
 #TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/asus/tf300t/releasetools/tf300t_ota_from_target_files
 
 # SELinux Defines
-BOARD_SEPOLICY_DIRS := \
-    device/asus/tf300t/sepolicy
+BOARD_SEPOLICY_DIRS += device/asus/tf300t/sepolicy
+
 
 # CMHW
 BOARD_HARDWARE_CLASS := device/asus/tf300t/cmhw/
