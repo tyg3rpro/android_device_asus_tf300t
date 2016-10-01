@@ -16,17 +16,6 @@
   -->
 
 <resources>
-    <!-- Defines the implementation of the velocity tracker to be used for the panel expansion. Can
-         be 'platform' or 'noisy' (i.e. for noisy touch screens). -->
-    <string name="velocity_tracker_impl" translatable="false">noisy</string>
-
-    <!-- Show camera affordance on Keyguard -->
-    <bool name="config_keyguardShowCameraAffordance">false</bool>
-
-    <!-- Disable expensive shadows -->
-    <bool name="config_recents_fake_shadows">true</bool>
-
-    <!-- Use hardware layers in recents -->
-    <bool name="config_recents_use_hardware_layers">true</bool>
-
+    <!-- Nav bar button default ordering/layout -->
+    <string name="config_navBarLayout" translatable="false">back[0.5],home[0.5],recent[0.5];space;menu_ime[1.2],recent[0.5],switch_toprevious_task[0.5]</string>
 </resources>
