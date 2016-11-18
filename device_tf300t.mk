@@ -118,10 +118,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.epad.model=TF300T \
     ro.product.model=TF300T
-#misc
+# Aggresively optimize art for performance
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dex2oat-flags=--no-watch-dog \
     dalvik.vm.dex2oat-swap=false
+    pm.dexopt.bg-dexopt=everything-profile \
+    pm.dexopt.ab-ota=everything-profile \
+    pm.dexopt.nsys-library=everything-profile \
+    pm.dexopt.shared-apk=everything-profile \
+    pm.dexopt.forced-dexopt=everything-profile \
+    pm.dexopt.core-app=everything-profile
 
 # media files
 PRODUCT_COPY_FILES += \
