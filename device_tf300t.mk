@@ -70,16 +70,9 @@ PRODUCT_COPY_FILES += \
 # Build characteristics setting 
 PRODUCT_CHARACTERISTICS := tablet
 
-# This device have enough room for precise davick
-PRODUCT_TAGS += dalvik.gc.type-precise
-
 # Extra packages to build for this device
 PRODUCT_PACKAGES += \
-    librs_jni \
-    com.android.future.usb.accessory \
-    make_ext4fs \
     setup_fs \
-    e2fsck \
     audio.a2dp.default \
     audio.r_submix.default \
     tinymix \
@@ -96,7 +89,6 @@ PRODUCT_PACKAGES += \
  PRODUCT_PACKAGES += \
     libwpa_client \
     hostapd \
-    dhcpcd.conf \
     wpa_supplicant \
     wpa_supplicant.conf
 
