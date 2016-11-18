@@ -121,7 +121,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Aggresively optimize art for performance
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dex2oat-flags=--no-watch-dog \
-    dalvik.vm.dex2oat-swap=false
+    dalvik.vm.dex2oat-swap=false \
     pm.dexopt.bg-dexopt=everything-profile \
     pm.dexopt.ab-ota=everything-profile \
     pm.dexopt.nsys-library=everything-profile \
