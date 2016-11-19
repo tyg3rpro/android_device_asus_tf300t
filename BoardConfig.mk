@@ -21,8 +21,8 @@ BOARD_USES_GENERIC_AUDIO := false
 BOARD_HAVE_PRE_KITKAT_AUDIO_POLICY_BLOB := true
 
 BOARD_AUDIORECORD_SKIP_GET_CAPTURE_POSITION := true
-USE_CAMERA_STUB := false
 SENSORS_NEED_SETRATE_ON_ENABLE := true
+#TARGET_HAS_LEGACY_CAMERA_HAL1 := true
 
 #BOARD_EGL_NEEDS_LEGACY_FB := true
 # Camera options
@@ -68,7 +68,7 @@ BOARD_EGL_WORKAROUND_BUG_10194508 := true
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_BLUEDROID_VENDOR_CONF := device/asus/tf300t/bluetooth/vnd_tf300t.txt
+BOARD_CUSTOM_BT_CONFIG := device/asus/tf300t/bluetooth/vnd_tf300t.txt
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR ?= device/asus/tf300t/bluetooth
 
 # Wifi related defines
@@ -108,8 +108,6 @@ TARGET_PREBUILT_KERNEL := device/asus/tf300t/kernel
 BOARD_SEPOLICY_DIRS += device/asus/tf300t/sepolicy
 
 
-# CMHW
-BOARD_HARDWARE_CLASS := device/asus/tf300t/cmhw/
 
 # Recovery Options
 #BOARD_CUSTOM_BOOTIMG_MK := device/asus/tf300t/recovery/recovery.mk
