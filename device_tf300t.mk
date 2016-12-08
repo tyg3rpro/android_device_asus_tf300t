@@ -125,8 +125,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     pm.dexopt.bg-dexopt=everything-profile \
     pm.dexopt.ab-ota=everything-profile \
     pm.dexopt.nsys-library=everything-profile \
-    pm.dexopt.shared-apk=everything-profile \
-    pm.dexopt.forced-dexopt=everything-profile \
     pm.dexopt.core-app=everything-profile
 
 # media files
