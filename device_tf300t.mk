@@ -92,6 +92,8 @@ PRODUCT_PACKAGES += \
     wpa_supplicant \
     wpa_supplicant.conf
 
+PRODUCT_PACKAGES += power.cardhu
+
 # Propertys spacific for this device
 PRODUCT_PROPERTY_OVERRIDES := \
     wifi.interface=wlan0 \
