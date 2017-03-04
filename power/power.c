@@ -33,6 +33,7 @@
 #include <hardware/power.h>
 
 #define BOOST_PATH      "/sys/devices/system/cpu/cpufreq/interactive/boost"
+#define INTERACTIVE_KEEP_MIN_CPU      "/sys/devices/system/cpu/cpufreq/interactive/min_core_keep"
 #define UEVENT_MSG_LEN 2048
 #define TOTAL_CPUS 4
 #define RETRY_TIME_CHANGING_FREQ 20
@@ -196,6 +197,8 @@ static void main_power_init( __attribute__((unused)) struct power_module *module
 		"0");
     sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/input_boost",
 		"1");
+    sysfs_write(INTERACTIVE_KEEP_MIN_CPU, "4");
+
    // uevent_init();
 }
 
@@ -208,6 +211,7 @@ static void main_power_set_interactive(__attribute__((unused)) struct power_modu
 		sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/core_lock_count", "4");
 		sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/input_boost", "1");
 		sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/io_is_busy", "1");
+		sysfs_write(INTERACTIVE_KEEP_MIN_CPU, "2");
 	}
 	else {
 		sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load", "85");
@@ -215,6 +219,7 @@ static void main_power_set_interactive(__attribute__((unused)) struct power_modu
 		sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/core_lock_count", "0");
 		sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/input_boost", "0");
 		sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/io_is_busy", "0");
+		sysfs_write(INTERACTIVE_KEEP_MIN_CPU, "0");
 	}
 }
 
