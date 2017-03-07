@@ -14,5 +14,8 @@ ro.sys.fw.trim_empty_percent=70
 ro.sys.fw.trim_cache_percent=70
 ro.sys.fw.bservice_enable=true
 
+media.stagefright.legacyencoder=1
+media.stagefright.less-secure=1
+
 # don't preload OpenGL in Zygote, the Tegra drivers do not like it
 ro.zygote.disable_gl_preload=true
