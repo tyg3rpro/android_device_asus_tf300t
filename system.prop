@@ -10,8 +10,8 @@ sensor.loop.minms=0
 orientation.magnitude.threshold=50
 ro.sys.fw.bg_apps_limit = 12
 ro.sys.fw.use_trim_settings=true
-ro.sys.fw.trim_empty_percent=70
-ro.sys.fw.trim_cache_percent=70
+ro.sys.fw.trim_empty_percent=90
+ro.sys.fw.trim_cache_percent=90
 ro.sys.fw.bservice_enable=true
 
 media.stagefright.legacyencoder=1
