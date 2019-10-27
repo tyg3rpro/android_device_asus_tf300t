@@ -32,8 +32,8 @@ BOARD_NEEDS_VECTORIMPL_SYMBOLS := true
 
 # Cardhu HAL libraries
 BOARD_HAL_STATIC_LIBRARIES := \
-    libdumpstate.cardhu \
-    libhealthd.cardhu
+    libdumpstate.cardhu #\
+    #libhealthd.cardhu
 
 # inherit from the proprietary version
 -include vendor/asus/tf300t/BoardConfigVendor.mk
@@ -44,6 +44,7 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 TARGET_NO_RADIOIMAGE := true
 TARGET_BOOTLOADER_BOARD_NAME := cardhu
 TARGET_NO_BOOTLOADER := true
+TARGET_NO_RECOVERY := true
 
 TARGET_BOARD_PLATFORM := tegra
 
@@ -96,11 +97,11 @@ BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 
 
 # Try to build the kernel
-#TARGET_KERNEL_SOURCE := kernel/asus/tf300t
-#TARGET_KERNEL_CONFIG := katkernel_defconfig
+TARGET_KERNEL_SOURCE := kernel/asus/tf300t
+TARGET_KERNEL_CONFIG := katkernel_defconfig
 
 # Prebuilt Kernel Fallback
-TARGET_PREBUILT_KERNEL := device/asus/tf300t/kernel
+#TARGET_PREBUILT_KERNEL := device/asus/tf300t/kernel
 
 # Custom Tools
 #TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/asus/tf300t/releasetools/tf300t_ota_from_target_files
